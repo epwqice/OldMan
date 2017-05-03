@@ -17,8 +17,9 @@
     "babel-preset-react": "~6.24.1",
     "babel-preset-stage-0": "~6.24.1",
     "babel-register": "~6.24.1",
+    "redis": "^2.7.1",
     "express": "^4.15.2",
     "webpack": "^2.2.1",
-    "admin-on-rest": "^0.9.4"
+    "admin-on-rest": "git://github.com/epwqice/admin-on-rest-old-man.git"
   }
 }
