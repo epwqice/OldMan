@@ -1,14 +1,18 @@
 const express = require('express') ;
+const path = require('path');
 
 const app = express();
 
 app.use('/OldManManager', require('./src/server/rest/old-man-manager'));
-app.use('/', express.static('./dist'));
-app.use('/', express.static('./src/web'));
+app.use(express.static(path.join(__dirname, 'dist')))
 
 
 app.get('/', function(req, res){
-  res.redirect('/index.html');
+  res.sendFile(path.join(__dirname, '/src/web', 'index.html'))
+});
+
+app.get('/vip_manager', function(req, res){
+  res.sendFile(path.join(__dirname, '/src/web', 'index.html'))
 });
 
 if (!app.parent) {

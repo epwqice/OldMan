@@ -1,6 +1,6 @@
 import React from 'react';
 import { SimpleForm, List, Datagrid, Edit, Create, TextField, TextInput, EditButton } from 'admin-on-rest/lib/mui';
-import getRes from '../res/local';
+import { getRes } from '../res/local';
 
 
 export const OldManList = (props) => (
