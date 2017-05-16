@@ -11,6 +11,10 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, '/src/web', 'index.html'))
 });
 
+app.get('/check_in_manager', function(req, res){
+  res.sendFile(path.join(__dirname, '/src/web', 'index.html'))
+});
+
 app.get('/vip_manager', function(req, res){
   res.sendFile(path.join(__dirname, '/src/web', 'index.html'))
 });
