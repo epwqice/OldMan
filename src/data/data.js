@@ -5,6 +5,124 @@ const Data = {
     }
   },
   data: {
+    'check_in_manager': {
+      'vip_system': {
+        'reception_register': {
+          'consultation_person_info': {
+            'type': 'resourceGroup',
+            'name':{
+              type: 'string',
+              zh_CN: '名称',
+            },
+            'relation_old_man': {
+              type: 'enum',
+              sub_type: 'relation_old_man',
+              zh_CN: '与老人关系'
+            },
+            'sex':{
+              type: 'enum',
+              sub_type: 'sex',
+              zh_CN: '性别'
+            },
+            'mobile_num': {
+              type: 'regular',
+              sub_type: 'mobile_num',
+              zh_CN: '手机号码'
+            },
+            'consultation_date':{
+              type: 'date',
+              zh_CN: '咨询日期'
+            },
+            'address': {
+              type: 'string',
+              zh_CN: '家庭住址'
+            },
+            'zh_CN': '咨询人信息'
+          },
+          'old_man_info': {
+            'type': 'resourceGroup',
+            'name': {
+              'type': 'string',
+              'zh_CN': '姓名'
+            },
+            'age': {
+              'type': 'string',
+              'zh_CN': '家庭住址'
+            },
+            'sex': {
+              'type': 'sex',
+              'zh_CN': '性别'
+            },
+            'health': {
+              'type': 'enum',
+              'sub_type': 'health',
+              'zh_CN': '自理情况'
+            },
+            'certificate_type': {
+              'type': 'enum',
+              'sub_type': 'certificate_type',
+              'zh_CN': '证件类型'
+            },
+            'certificate_info': {
+              'type': 'certificate_info',
+              'zh_CN': '证件信息'
+            },
+            'mobile_num': {
+              'type': 'regular',
+              'sub_type': 'mobile_num',
+              'zh_CN': '手机号码'
+            },
+            'zh_CN': '意向客户信息（老人）'
+          },
+          'zh_CN': '接待登记1',
+          'list': {
+            'consultation_person_info': ['name', 'relation_old_man', 'sex', 'mobile_num', 'consultation_date', 'address'],
+          },
+          'edit': {
+            'consultation_person_info': ['name', 'relation_old_man', 'sex', 'mobile_num', 'consultation_date', 'address'],
+          },
+          'create': {
+            'consultation_person_info': ['name', 'relation_old_man', 'sex', 'mobile_num', 'consultation_date', 'address'],
+            'old_man_info': ['name', 'age', 'sex', 'health', 'certificate_type', 'certificate_info', 'mobile_num'],
+          }
+        },
+        'vip_manager': {
+          'old_man_info': {
+            'type': 'resourceGroup',
+            'name': {
+              'type': 'string',
+              'zh_CN': '姓名',
+            },
+            'sex': {
+              'type': 'sex',
+              'zh_CN': '性别'
+            },
+            'certificate_type': {
+              'type': 'enum',
+              'sub_type': 'certificate_type',
+              'zh_CN': '证件类型'
+            },
+            'certificate_info': {
+              'type': 'certificate_info',
+              'zh_CN': '证件信息'
+            },
+            'zh_CN': '老人会员信息',
+          },
+          'list': {
+            'old_man_info': ['name', 'sex', 'certificate_type', 'certificate_info'],
+          },
+          'edit': {
+            'old_man_info': ['name', 'sex', 'certificate_type', 'certificate_info'],
+          },
+          'create': {
+            'old_man_info': ['name', 'sex', 'certificate_type', 'certificate_info'],
+          },
+          'zh_CN': '会员管理',
+        },
+        'zh_CN': '会员系统',
+      },
+      'zh_CN': '会员管理',
+    },
     'vip_manager': {
       'vip_system': {
         'reception_register': {
@@ -121,7 +239,7 @@ const Data = {
         },
         'zh_CN': '会员系统',
       },
-      'zh_CN': '会员管理',
+      'zh_CN': '入住服务',
     },
   },
   enum: {

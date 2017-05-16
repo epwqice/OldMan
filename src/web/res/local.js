@@ -2,6 +2,13 @@ import Data from '../../data/data';
 
 const currentLocal = () => (window.sessionStorage && window.sessionStorage.local) ? window.sessionStorage.local : 'zh_CN';
 
+export const getAppRes = (key) => {
+  const curLocal = currentLocal();
+  const resData = Data.app;
+
+  return resData[key] ? resData[key][curLocal] : key;
+}
+
 export const getRes = (cKey, rgKey, rKey, fgKey, key) => {
   const curLocal = currentLocal();
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimpleForm, List, Datagrid, Edit, Create, TextField, TextInput, EditButton, SelectInput } from 'admin-on-rest/lib/mui';
+import { SimpleForm, List, Datagrid, Edit, Create, TextField, TextInput, EditButton, SelectInput, DateField, DateInput } from 'admin-on-rest/lib/mui';
 import * as Type from '../../data/type_defined';
 import { getRes, getEnum } from '../res/local';
 
@@ -13,7 +13,7 @@ const createFieldFactory = {
   list: {
     'string': (id, label) => <TextField label={label} source={id} />,
     'enum': (id, label) => <TextField label={label} source={id} />,
-    string: (id, label) => <TextField label={label} source={id} />,
+    'date': (id, label) => <DateField label={label} source={id} />,
     string: (id, label) => <TextField label={label} source={id} />,
     string: (id, label) => <TextField label={label} source={id} />,
     string: (id, label) => <TextField label={label} source={id} />,
@@ -28,7 +28,7 @@ const createFieldFactory = {
   edit: {
     'string': (id, label) => <TextInput label={label} source={id} />,
     'enum': (id, label, options) => <SelectInput label={label} source={id} choices={options.choices} />,
-    // string: (id, label) => <TextInput label={label} source={id} />,
+    'date': (id, label) => <DateInput label={label} source={id} />,
     // string: (id, label) => <TextInput label={label} source={id} />,
     // string: (id, label) => <TextInput label={label} source={id} />,
     // string: (id, label) => <TextInput label={label} source={id} />,
