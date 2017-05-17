@@ -19,7 +19,7 @@ for (let key of Object.keys(appData.data)) {
 
 const basePath = document.location.href;
 const pathArray = basePath.split('/');
-const currentPath = pathArray[pathArray.length - 1];
+const currentPath = pathArray[3];
 
 
 render(

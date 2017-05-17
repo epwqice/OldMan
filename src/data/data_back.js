@@ -6,6 +6,7 @@ const Data = {
   },
   data: {
     'check_in_manager': {
+
       zh_CN: '入住服务',
     },
     'vip_manager': {
