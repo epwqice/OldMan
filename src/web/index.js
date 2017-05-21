@@ -23,7 +23,7 @@ const currentPath = pathArray[3];
 
 
 render(
-  <Admin basePath={currentPath} title={getAppRes('title')} theme={oldManTheme} appMenus={appMenus} restClient={ simpleRestClient('http://localhost:3000')}>
+  <Admin title={getAppRes('title')} theme={oldManTheme} appMenus={appMenus} restClient={ simpleRestClient('http://localhost:3000')}>
     {createResourceGroup(currentPath)}
   </Admin>,
   document.getElementById('App')
